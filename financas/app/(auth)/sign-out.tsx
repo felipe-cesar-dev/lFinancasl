@@ -9,7 +9,7 @@ export const SignOutButton = () => {
     try {
       await signOut()
       // Redirect to your desired page
-      Linking.openURL(Linking.createURL('/sign-in'))
+      Linking.openURL(Linking.createURL('./sign-in'))
     } catch (err) {
       console.error(JSON.stringify(err, null, 2))
     }
