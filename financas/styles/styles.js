@@ -1,6 +1,5 @@
 const styles = {
     layoutGeral: {
-        padding: 20,
         backgroundColor: 'red',
         flex: 1,
         alignItems: 'center',
@@ -8,10 +7,14 @@ const styles = {
     },
 
     layoutView: {
-        backgroundColor: 'rgba(204, 255, 210, 0.66)',
-        padding: 30,
+        backgroundColor: 'rgba(204, 255, 210, 0.9)',
+        padding: 70,
         borderRadius: 20,
     },
+
+    layoutText: {
+        fontSize: 25
+    }
 
 }
 

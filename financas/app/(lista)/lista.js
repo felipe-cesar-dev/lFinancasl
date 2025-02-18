@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, Button, FlatList, TextInput } from 'react-native';
+import { View, Text, Button, FlatList, TextInput, ImageBackground } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
+import styles from '@/styles/styles';
 
 const Lista = () => {
   const [itensArmazenados, setItensArmazenados] = useState([]);
@@ -52,6 +53,7 @@ const Lista = () => {
   };
 
   return (
+    <ImageBackground source={require('../../images/backgroundHome.jpeg')} style = {styles.layoutGeral}>
     <View style={{ padding: 50 }}>
       <TextInput
         value={itemExcluir}
@@ -72,6 +74,7 @@ const Lista = () => {
       />
       <Button title="Excluir todos os itens da lista" onPress={excluirTodosItens} />
     </View>
+    </ImageBackground>
   );
 };
 

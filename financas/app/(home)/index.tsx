@@ -28,20 +28,25 @@ const Page = () => {
   return (
     <ImageBackground 
         source={require('../../images/backgroundHome.jpeg')} style = {styles.layoutGeral}>
+      <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
       <SignOutButton/>
+      
       <View style = {styles.layoutView} >
-        <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
+
+        <Text style = {styles.layoutText}>Digite a manutenção:</Text>
         <TextInput
           value={texto}
           onChangeText={(text) => setTexto(text)}
-          placeholder="Digite a manutenção:"
+          placeholder="Ex: Troca de óleo"
         />
+        <Text style = {styles.layoutText}>Valor</Text>
         <TextInput
           value={valor}
           onChangeText={(text) => setValor(text)}
-          placeholder="Digite um valor:"
+          placeholder="R$30,00"
           keyboardType="numeric"
         />
+        <Text style = {styles.layoutText}>Data da manutenção</Text>
         <TextInput
           value={data}
           onChangeText={(text) => setData(text)}
