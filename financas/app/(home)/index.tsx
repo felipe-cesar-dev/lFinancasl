@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useUser } from '@clerk/clerk-expo'
+import { Link } from 'expo-router'
 import { SignOutButton } from '../(auth)/sign-out';
 
 const Page = () => {
@@ -44,6 +45,15 @@ const Page = () => {
       />
       <Button title="Guardar manutenção" onPress={armazenarDados} />
       <SignOutButton/>
+      <Link style = {{
+        padding: 10,
+        backgroundColor: 'rgb(4, 175, 7)',
+        textAlign: 'center',
+        color: 'white',
+        fontWeight: 'bold'
+      }} href="./lista">
+        <Text>Ver lista de manutenções</Text>
+      </Link>
     </View>
     
   );
