@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useUser } from '@clerk/clerk-expo'
-import MyTabs from './tab.js'
+import { SignOutButton } from '../(auth)/sign-out';
 
 const Page = () => {
   const [texto, setTexto] = useState('');
@@ -43,6 +43,7 @@ const Page = () => {
         placeholder="Digite uma data:"
       />
       <Button title="Armazenar" onPress={armazenarDados} />
+      <SignOutButton/>
     </View>
     
   );
