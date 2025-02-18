@@ -42,7 +42,7 @@ const Page = () => {
         onChangeText={(text) => setData(text)}
         placeholder="Digite uma data:"
       />
-      <Button title="Armazenar" onPress={armazenarDados} />
+      <Button title="Guardar manutenção" onPress={armazenarDados} />
       <SignOutButton/>
     </View>
     
