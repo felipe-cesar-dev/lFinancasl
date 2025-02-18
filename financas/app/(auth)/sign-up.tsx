@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { Text, TextInput, Button, View } from 'react-native'
 import { useSignUp } from '@clerk/clerk-expo'
-import { useRouter } from 'expo-router'
+import { useRouter, Link } from 'expo-router'
+
 
 export default function SignUpScreen() {
   const { isLoaded, signUp, setActive } = useSignUp()
@@ -66,10 +67,10 @@ export default function SignUpScreen() {
   if (pendingVerification) {
     return (
       <>
-        <Text>Verify your email</Text>
+        <Text>Verifique seu e-mail</Text>
         <TextInput
           value={code}
-          placeholder="Enter your verification code"
+          placeholder="Digite seu código de verificação"
           onChangeText={(code) => setCode(code)}
         />
         <Button title="Verify" onPress={onVerifyPress} />
@@ -80,21 +81,27 @@ export default function SignUpScreen() {
   return (
     <View>
       <>
-        <Text>Sign up</Text>
+        <Text>Cadastre-se</Text>
         <TextInput
           autoCapitalize="none"
           value={emailAddress}
-          placeholder="Enter email"
+          placeholder="Digite seu e-mail"
           onChangeText={(email) => setEmailAddress(email)}
         />
         <TextInput
           value={password}
-          placeholder="Enter password"
+          placeholder="Digite sua senha"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
         />
-        <Button title="Continue" onPress={onSignUpPress} />
+        <Button title="Cadastrar" onPress={onSignUpPress} />
       </>
+            <View>
+              <Text>Já tem uma conta?</Text>
+              <Link href="/sign-in">
+                <Text>Faça o login</Text>
+              </Link>
+            </View>
     </View>
   )
 }

@@ -15,5 +15,5 @@ export const SignOutButton = () => {
     }
   }
 
-  return <Button title="Sign out" onPress={handleSignOut} />
+  return <Button title="Encerrar Sessão" onPress={handleSignOut} />
 }

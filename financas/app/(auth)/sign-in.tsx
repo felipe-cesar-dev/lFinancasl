@@ -40,23 +40,24 @@ export default function Page() {
 
   return (
     <View>
+      <Text>Entre na sua conta</Text>
       <TextInput
         autoCapitalize="none"
         value={emailAddress}
-        placeholder="Enter email"
+        placeholder="Digite seu e-mail"
         onChangeText={(emailAddress) => setEmailAddress(emailAddress)}
       />
       <TextInput
         value={password}
-        placeholder="Enter password"
+        placeholder="Digite sua senha"
         secureTextEntry={true}
         onChangeText={(password) => setPassword(password)}
       />
-      <Button title="Sign in" onPress={onSignInPress} />
+      <Button title="Entrar" onPress={onSignInPress} />
       <View>
-        <Text>Don't have an account?</Text>
+        <Text>Não tem uma conta?</Text>
         <Link href="/sign-up">
-          <Text>Sign up</Text>
+          <Text>Cadastre-se</Text>
         </Link>
       </View>
     </View>
