@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text } from 'react-native';
+import { View, TextInput, Button, Text, ImageBackground } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useUser } from '@clerk/clerk-expo'
-import { Link } from 'expo-router'
 import { SignOutButton } from '../(auth)/sign-out';
+
+import styles from '../../styles/styles'
 
 const Page = () => {
   const [texto, setTexto] = useState('');
@@ -25,37 +26,30 @@ const Page = () => {
   };
 
   return (
-    <View style={{ padding: 50 }}>
-      <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
-      <TextInput
-        value={texto}
-        onChangeText={(text) => setTexto(text)}
-        placeholder="Digite a manutenção:"
-      />
-      <TextInput
-        value={valor}
-        onChangeText={(text) => setValor(text)}
-        placeholder="Digite um valor:"
-        keyboardType="numeric"
-      />
-      <TextInput
-        value={data}
-        onChangeText={(text) => setData(text)}
-        placeholder="Digite uma data:"
-      />
-      <Button title="Guardar manutenção" onPress={armazenarDados} />
+    <ImageBackground 
+        source={require('../../images/backgroundHome.jpeg')} style = {styles.layoutGeral}>
       <SignOutButton/>
-      <Link style = {{
-        padding: 10,
-        backgroundColor: 'rgb(4, 175, 7)',
-        textAlign: 'center',
-        color: 'white',
-        fontWeight: 'bold'
-      }} href="./lista">
-        <Text>Ver lista de manutenções</Text>
-      </Link>
-    </View>
-    
+      <View style = {styles.layoutView} >
+        <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
+        <TextInput
+          value={texto}
+          onChangeText={(text) => setTexto(text)}
+          placeholder="Digite a manutenção:"
+        />
+        <TextInput
+          value={valor}
+          onChangeText={(text) => setValor(text)}
+          placeholder="Digite um valor:"
+          keyboardType="numeric"
+        />
+        <TextInput
+          value={data}
+          onChangeText={(text) => setData(text)}
+          placeholder="Digite uma data:"
+        />
+        <Button title="Guardar manutenção" onPress={armazenarDados} />
+      </View>
+    </ImageBackground>
   );
 };
 
