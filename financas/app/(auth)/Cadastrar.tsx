@@ -85,14 +85,14 @@ export default function SignUpScreen() {
                 marginBottom: 20
               }}>
         
-        <Text style = {styles.layoutText}>Digite seu E-mail:</Text>
+        <Text style = {styles.layoutText}>Digite seu e-mail:</Text>
         <TextInput
           autoCapitalize="none"
           value={emailAddress}
           placeholder="exemplo@exemplo.com"
           onChangeText={(email) => setEmailAddress(email)}
         />
-        <Text style = {styles.layoutText}>Digite seu E-mail:</Text>
+        <Text style = {styles.layoutText}>Digite sua senha:</Text>
         <TextInput
           value={password}
           placeholder="senha"

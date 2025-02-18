@@ -50,7 +50,7 @@ export default function Page() {
           marginBottom: 20
         }}>
       
-      <Text style = {styles.layoutText}>Digite seu Email: </Text>
+      <Text style = {styles.layoutText}>Digite seu e-mail: </Text>
       <TextInput
         autoCapitalize="none"
         value={emailAddress}
