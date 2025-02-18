@@ -98,7 +98,7 @@ export default function SignUpScreen() {
       </>
             <View>
               <Text>Já tem uma conta?</Text>
-              <Link href="/sign-in">
+              <Link href="/Entrar">
                 <Text>Faça o login</Text>
               </Link>
             </View>

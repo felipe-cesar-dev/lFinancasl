@@ -56,7 +56,7 @@ export default function Page() {
       <Button title="Entrar" onPress={onSignInPress} />
       <View>
         <Text>Não tem uma conta?</Text>
-        <Link href="/sign-up">
+        <Link href="/Cadastrar">
           <Text>Cadastre-se</Text>
         </Link>
       </View>

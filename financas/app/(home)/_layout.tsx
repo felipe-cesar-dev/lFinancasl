@@ -1,5 +1,5 @@
-import { Stack } from 'expo-router/stack'
+import MyTabs from './tab'
 
 export default function Layout() {
-  return <Stack />
+  return <MyTabs/>
 }
