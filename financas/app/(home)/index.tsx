@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useUser } from '@clerk/clerk-expo'
+import MyTabs from './tab.js'
 
 const Page = () => {
   const [texto, setTexto] = useState('');
@@ -43,6 +44,7 @@ const Page = () => {
       />
       <Button title="Armazenar" onPress={armazenarDados} />
     </View>
+    
   );
 };
 
