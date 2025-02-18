@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Lista from './lista.js';
+import Lista from '../(lista)/lista.js';
 import Page from './index.tsx'
 
 const Tab = createBottomTabNavigator();
