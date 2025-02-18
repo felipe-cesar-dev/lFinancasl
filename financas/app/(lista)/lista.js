@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Button, FlatList, TextInput } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Link, useFocusEffect } from '@react-navigation/native';
-import Page from '../(home)';
+import { useFocusEffect } from '@react-navigation/native';
 
 const Lista = () => {
   const [itensArmazenados, setItensArmazenados] = useState([]);
