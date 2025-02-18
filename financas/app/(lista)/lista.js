@@ -60,19 +60,19 @@ const Lista = () => {
         onChangeText={(text) => setItemExcluir(text)}
         placeholder="Digite o item a ser excluído"
       />
-      <Button title="Excluir item" onPress={excluirItem} />
+      <Button color='green' title="Excluir item" onPress={excluirItem} />
       <FlatList
         data={itensArmazenados}
         renderItem={({ item }) => (
-          <View>
-            <Text>Manutenção: {item.texto}</Text>
-            <Text>Valor: R${item.valor}</Text>
-            <Text>Data: {item.data} {'\n'}</Text>
+          <View style = {styles.listaView}>
+            <Text style = {styles.listaText}>Manutenção: {item.texto}</Text>
+            <Text style = {styles.listaText}>Valor: R${item.valor}</Text>
+            <Text style = {styles.listaText}>Data: {item.data} {'\n'}</Text>
           </View>
         )}
         keyExtractor={(item, index) => index.toString()}
       />
-      <Button title="Excluir todos os itens da lista" onPress={excluirTodosItens} />
+      <Button color='green' title="Excluir todos os itens da lista" onPress={excluirTodosItens} />
     </View>
     </ImageBackground>
   );

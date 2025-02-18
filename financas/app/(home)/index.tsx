@@ -28,11 +28,22 @@ const Page = () => {
   return (
     <ImageBackground 
         source={require('../../images/backgroundHome.jpeg')} style = {styles.layoutGeral}>
-      <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
+      <Text style = {{
+        color: 'black',
+        fontSize: 20,
+        marginBottom: 20
+      }}>Olá, {user?.emailAddresses[0].emailAddress}</Text>
       <SignOutButton/>
       
       <View style = {styles.layoutView} >
-
+        <View style = {{
+          borderWidth: 1,
+          borderColor: 'green',
+          padding: 20,
+          backgroundColor: 'rgba(52, 170, 97, 0.79)',
+          borderRadius: 10,
+          marginBottom: 20
+        }}>
         <Text style = {styles.layoutText}>Digite a manutenção:</Text>
         <TextInput
           value={texto}
@@ -52,7 +63,8 @@ const Page = () => {
           onChangeText={(text) => setData(text)}
           placeholder="Digite uma data:"
         />
-        <Button title="Guardar manutenção" onPress={armazenarDados} />
+        </View>
+        <Button color='green' title="Guardar manutenção" onPress={armazenarDados} />
       </View>
     </ImageBackground>
   );
