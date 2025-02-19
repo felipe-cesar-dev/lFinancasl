@@ -36,22 +36,17 @@ const Page = () => {
       <SignOutButton/>
       
       <View style = {styles.layoutView} >
-        <View style = {{
-          borderWidth: 1,
-          borderColor: 'green',
-          padding: 20,
-          backgroundColor: 'rgba(52, 170, 97, 0.79)',
-          borderRadius: 10,
-          marginBottom: 20
-        }}>
+        <View style = {styles.view2}>
         <Text style = {styles.layoutText}>Digite a manutenção:</Text>
         <TextInput
+          style = {styles.textInput}
           value={texto}
           onChangeText={(text) => setTexto(text)}
           placeholder="Ex: Troca de óleo"
         />
         <Text style = {styles.layoutText}>Valor</Text>
         <TextInput
+          style = {styles.textInput}
           value={valor}
           onChangeText={(text) => setValor(text)}
           placeholder="R$30,00"
@@ -59,6 +54,7 @@ const Page = () => {
         />
         <Text style = {styles.layoutText}>Data da manutenção</Text>
         <TextInput
+          style = {styles.textInput}
           value={data}
           onChangeText={(text) => setData(text)}
           placeholder="Digite uma data:"

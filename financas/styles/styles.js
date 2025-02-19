@@ -7,8 +7,8 @@ const styles = {
 
     layoutView: {
         backgroundColor: 'rgba(204, 255, 210, 0.9)',
-        padding: 70,
-        borderRadius: 20,
+        padding: 20,
+        borderRadius: 10,
         borderWidth: 1,
         borderColor: 'green',
         marginTop: 20
@@ -31,7 +31,23 @@ const styles = {
     listaText: {
         color: 'white',
         padding: 10
-    }
+    },
+
+    textInput: {
+        borderWidth: 1,
+        borderColor: 'green',
+        width: 300,
+        marginTop: 3
+    },
+
+    view2: {
+              borderWidth: 1,
+              borderColor: 'green',
+              padding: 30,
+              backgroundColor: 'rgba(52, 170, 97, 0.79)',
+              borderRadius: 10,
+              marginBottom: 20
+            }
 
 }
 

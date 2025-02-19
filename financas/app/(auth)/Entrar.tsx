@@ -35,23 +35,17 @@ export default function Page() {
   }
 
   return (
-    <ImageBackground source={require('../../images/backgroundHome.jpeg')} style = {styles.layoutGeral}>
+    <ImageBackground source={require('../../images/backgroundsign.jpeg')} style = {styles.layoutGeral}>
     <Text style ={{
       color: 'black',
       fontSize: 20
     }}>Entre na sua conta</Text>
     <View style = {styles.layoutView}>
-    <View style = {{
-          borderWidth: 1,
-          borderColor: 'green',
-          padding: 30,
-          backgroundColor: 'rgba(52, 170, 97, 0.79)',
-          borderRadius: 10,
-          marginBottom: 20
-        }}>
+    <View style = {styles.view2}>
       
       <Text style = {styles.layoutText}>Digite seu e-mail: </Text>
       <TextInput
+        style = {styles.textInput}
         autoCapitalize="none"
         value={emailAddress}
         placeholder="exemplo@exemplo.com"
@@ -59,12 +53,12 @@ export default function Page() {
       />
       <Text style = {styles.layoutText}>Digite sua senha: </Text>
       <TextInput
+        style = {styles.textInput}
         value={password}
         placeholder="Senha"
         secureTextEntry={true}
         onChangeText={(password) => setPassword(password)}
       />
-      <Button color='green' title="Entrar" onPress={onSignInPress} />
       <View>
         <Text style = {{marginTop: 2}} >Não tem uma conta?</Text>
         <Link href="/Cadastrar">
@@ -72,6 +66,7 @@ export default function Page() {
         </Link>
       </View>
     </View>
+    <Button color='green' title="Entrar" onPress={onSignInPress} />
     </View>
     </ImageBackground>
   )

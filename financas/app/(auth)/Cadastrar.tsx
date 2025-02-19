@@ -72,21 +72,15 @@ export default function SignUpScreen() {
   }
 
   return (
-    <ImageBackground source={require('../../images/backgroundHome.jpeg')} style = {styles.layoutGeral}>
+    <ImageBackground source={require('../../images/backgroundsignup.jpeg')} style = {styles.layoutGeral}>
     <Text style = {{fontSize: 20}}>Cadastre-se</Text>
     <View style = {styles.layoutView}>
       
-          <View style = {{
-                borderWidth: 1,
-                borderColor: 'green',
-                padding: 30,
-                backgroundColor: 'rgba(52, 170, 97, 0.79)',
-                borderRadius: 10,
-                marginBottom: 20
-              }}>
+    <View style = {styles.view2}>
         
         <Text style = {styles.layoutText}>Digite seu e-mail:</Text>
         <TextInput
+          style = {styles.textInput}
           autoCapitalize="none"
           value={emailAddress}
           placeholder="exemplo@exemplo.com"
@@ -94,12 +88,13 @@ export default function SignUpScreen() {
         />
         <Text style = {styles.layoutText}>Digite sua senha:</Text>
         <TextInput
+          style = {styles.textInput}
           value={password}
           placeholder="senha"
           secureTextEntry={true}
           onChangeText={(password) => setPassword(password)}
         />
-        <Button color = 'green' title="Cadastrar" onPress={onSignUpPress} />
+        
             <View>
               <Text style = {{marginTop: 2}}  >Já tem uma conta?</Text>
               <Link href="/Entrar">
@@ -107,6 +102,7 @@ export default function SignUpScreen() {
               </Link>
             </View>
     </View>
+    <Button color = 'green' title="Cadastrar" onPress={onSignUpPress} />
     </View>
     </ImageBackground>
   )
