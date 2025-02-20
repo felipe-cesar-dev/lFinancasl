@@ -8,8 +8,6 @@ export default function AuthRoutesLayout() {
     return (
       <Redirect href={'/'} />
     )
-  } else if (!isSignedIn) {
-      <Redirect href={'/(auth)/Entrar'} />
   }
 
   return <Stack />;
