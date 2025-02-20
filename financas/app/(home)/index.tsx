@@ -6,7 +6,7 @@ import { SignOutButton } from '../(auth)/sign-out';
 
 import styles from '../../styles/styles'
 
-const Page = () => {
+const Inicio = () => {
   const [texto, setTexto] = useState('');
   const [valor, setValor] = useState('');
   const [data, setData] = useState('');
@@ -66,4 +66,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Inicio;

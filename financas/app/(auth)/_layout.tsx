@@ -6,7 +6,7 @@ export default function AuthRoutesLayout() {
 
   if (isSignedIn) {
     return (
-      <Redirect href={'/(lista)/lista'} />
+      <Redirect href={'/'} />
     )
   } else if (!isSignedIn) {
       <Redirect href={'/(auth)/Entrar'} />
