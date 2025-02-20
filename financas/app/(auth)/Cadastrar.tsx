@@ -29,7 +29,7 @@ export default function SignUpScreen() {
       setPendingVerification(true)
     } catch (err) {
 
-      console.error(JSON.stringify(err, null, 2))
+      alert("Digite um email e senha para finalizar o cadastro.")
     }
   }
 

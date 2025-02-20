@@ -29,8 +29,7 @@ export default function Page() {
         console.error(JSON.stringify(signInAttempt, null, 2))
       }
     } catch (err) {
-
-      console.error(JSON.stringify(err, null, 2))
+      alert("DIgite seu e-mail e senha")
     }
   }
 

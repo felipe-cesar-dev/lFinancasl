@@ -5,9 +5,8 @@ export default function AuthRoutesLayout() {
   const { isSignedIn } = useAuth();
 
   if (isSignedIn) {
-    console.log('Conta Logada')
     return (
-      <Redirect href={'/'} />
+      <Redirect href={'/(lista)/lista'} />
     )
   } else if (!isSignedIn) {
       <Redirect href={'/(auth)/Entrar'} />
